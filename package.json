@@ -1,0 +1,27 @@
+{
+  "name": "conga-client-template",
+  "version": "0.0.1",
+  "description": "Conga.js bundle which handles complilation of templates for client-side browser usage",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/congajs/conga-client-template.git"
+  },
+  "keywords": [
+
+  ],
+  "author": "Marc Roulias",
+  "license": "MIT",
+  "dependencies": {
+    "underscore": "*"
+  },
+  "devDependencies": {
+
+  },
+  "readmeFilename": "README.md"
+}
