@@ -4,18 +4,6 @@ parameters:
     client.template.registry.constructor: conga-client-template:client-template-registry
     client.template.helper.constructor:   conga-client-template:helper/template
 
-    # the attribute to use as an identifier in inline templates
-    client.template.inline.identifier: data-template
-
-    # a prefix to add to template names within the identifer attribute value
-    client.template.inline.identifier.prefix: ''
-
-    # the namespace to create for the JST object
-    client.template.jst.namespace: window.JST
-
-    # the engine to use for JST template compilation
-    client.template.jst.engine: underscore
-
 services:
 
     # the client-template kernel listener
@@ -25,10 +13,12 @@ services:
             - { name: kernel.event, event: kernel.server_boot, method: onServerBoot, priority: 1 }
             - { name: app.middleware, method: onAddMiddleware, priority: 64 }
 
+    # the registry
     client.template.registry:
         constructor: "%client.template.registry.constructor%"
         arguments: ["@namespace.resolver", "@wrench"]
 
+    # the template helper
     client.template.helper:
         constructor: "%client.template.helper.constructor%"
         arguments: ["@service_container"]
