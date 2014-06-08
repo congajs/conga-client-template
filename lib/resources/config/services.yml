@@ -16,7 +16,7 @@ services:
     # the registry
     client.template.registry:
         constructor: "%client.template.registry.constructor%"
-        arguments: ["@namespace.resolver", "@wrench"]
+        arguments: ["@service_container","@namespace.resolver", "@wrench"]
 
     # the template helper
     client.template.helper:
