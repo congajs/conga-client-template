@@ -1,6 +1,6 @@
 {
   "name": "conga-client-template",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Conga.js bundle which handles compilation of templates for client-side browser usage",
   "directories": {
     "test": "test"
